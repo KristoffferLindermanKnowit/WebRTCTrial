@@ -4,6 +4,12 @@ const configuration = {
     }]
 };
 
+// Generate random room name if needed
+if (!location.hash) {
+    location.hash = Math.floor(Math.random() * 0xFFFFFF).toString(16);
+}
+const roomHash = location.hash.substring(1);
+
 function onSuccess() {
     console.log("Success!");
 }
@@ -13,7 +19,7 @@ function onError(error) {
 }
 
 // Room name needs to be prefixed with 'observable-'
-const roomName = 'observable-' + "knowit";
+const roomName = 'observable-' + roomHash;
 let room;
 const drone = new ScaleDrone('oRT84h7cQKjgjTnN');
 
