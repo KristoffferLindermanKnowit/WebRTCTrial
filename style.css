@@ -1,0 +1,19 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+}
+
+.video-container {
+    display: flex;
+    margin: auto 30px;
+    justify-content: space-between;
+}
+
+.video-container video {
+    width: 48%;
+}
